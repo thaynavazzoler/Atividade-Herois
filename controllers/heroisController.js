@@ -60,5 +60,64 @@ async function deleteHeroi(req, res) {
   }
 }
 
+async function getHeroiById (req, res) {
+  try {
+    const { id } = req.params;
+    const { rows } = await pool.query("SELECT * FROM herois WHERE id = $1", [
+      id,
+    ]);
+    res.status(200).send({
+      message: "Herois encontrados com sucesso!",
+      herois: rows,
+    });
+  } catch (error) {
+    console.error("Erro ao buscar herois", error);
+    res.status(500).send("Erro ao buscar herois");
+  }
+}
 
-module.exports = { createHeroi, getAllHerois, updateHeroi, deleteHeroi };
+async function getHeroisByNome(req, res) {
+  try {
+    const { nome } = req.params;
+    const { rows } = await pool.query("SELECT * FROM herois WHERE nome = $1", [
+      nome,
+    ]);
+    if (rows.length === 0) {
+      return res.status(404).send({
+        message: "Nenhum herói encontrado com esse nome.",
+      });
+    }
+    res.status(200).send({
+      message: "Heróis encontrados com sucesso!",
+      herois: rows,
+    });
+  } catch (error) {
+    console.error("Erro ao buscar heróis", error);
+    res.status(500).send("Erro ao buscar heróis");
+  }
+}
+
+async function getHeroisByPoder (req, res)  {
+  try {
+    const { poder } = req.params;
+    const { rows } = await pool.query("SELECT * FROM herois WHERE poder = $1", [
+      poder,
+    ]);
+    if (rows.length === 0) {
+      return res.status(404).send({
+        message: "Nenhum herói encontrado com esse poder.",
+      });
+    }
+    res.status(200).send({
+      message: "Heróis encontrados com sucesso!",
+      herois: rows,
+    });
+  } catch (error) {
+    console.error("Erro ao buscar heróis", error);
+    res.status(500).send("Erro ao buscar heróis");
+  }
+}
+
+
+
+module.exports = { createHeroi, getAllHerois, updateHeroi, deleteHeroi, getHeroiById, getHeroisByNome, getHeroisByPoder };  
