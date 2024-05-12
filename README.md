@@ -9,6 +9,7 @@
 <h2>Funcionalidades:</h2>
 
 - Criação, leitura, atualização e exclusão (CRUD) de heróis.
+- Implementação de uma rota que permite simular uma batalha entre dois heróis.
 - Filtro de batalha por nome de herói.
 - Criação de uma rota para consultar o histórico de todas as batalhas registradas.
 
