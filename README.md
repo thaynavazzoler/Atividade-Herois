@@ -1,4 +1,4 @@
-<h1> 🦹‍♂️💥📚 Estruturação de pastas do projeto sobre super-heróis 📚💥🦹‍♂️ </h1>
+<h1> 🦹‍♂️💥📚 Projeto sobre super-heróis 📚💥🦹‍♂️ </h1>
 
 <h2> Descrição: </h2>
 
@@ -64,3 +64,4 @@ npm start
 - **GET** /herois/poder/:poder: Busca heróis com algum tipo de poder.
 - **GET** /batalhar/:idHeroi1/:idHeroi2: Simula uma batalha entre dois heróis.
 - **GET** /historico: Retorna o histórico de todas as batalhas registradas.
+
