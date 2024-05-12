@@ -4,7 +4,7 @@
 
 🦸‍♂️ Projeto sobre super-heróis, utilizando um banco de dados PostgreSQL para possibilitar operações CRUD completas para os heróis. 📚💥🦹‍♂️
 
-<img src="https://cdn.falauniversidades.com.br/wp-content/uploads/2021/08/26165507/Animacoes-DC-Comics-1024x683.png" alt="Imagem dos super-heróis da DC">
+<img src="https://cdn.mos.cms.futurecdn.net/ubBczsyC5Fe9jHKcaKhwZY-1200-80.jpg" alt="Imagem dos super-heróis da DC">
 
 <h2>Funcionalidades:</h2>
 
